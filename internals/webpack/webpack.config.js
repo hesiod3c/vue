@@ -57,6 +57,13 @@ const baseConfig = {
         }
       },
       {
+        test: /\.vue/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'vue-loader'
+        }
+      },
+      {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',

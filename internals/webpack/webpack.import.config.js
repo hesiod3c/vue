@@ -13,6 +13,13 @@ const config = {
         }
       },
       {
+        test: /\.vue/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'vue-loader'
+        }
+      },
+      {
         test: /\.scss$/,
         include: path.resolve(__dirname, '../../source/scss/'),
         exclude: [],

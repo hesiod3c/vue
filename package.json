@@ -6,12 +6,12 @@
   "scripts": {
     "build": "yarn build:js",
     "build:js": "cross-env NODE_ENV=production && babel source --out-dir lib && webpack --progress --config ./internals/webpack/webpack.config.js",
-    "build:storybook": "cross-env NODE_ENV=development build-storybook -c ./internals/storybook -o .out",
+    "build:play": "vbuild -c play.config.js",
     "lint": "yarn lint:js",
     "lint:js": "eslint source/**",
+    "play": "vbuild -c play.config.js -d",
     "precommit": "yarn lint",
     "prepush": "yarn test",
-    "storybook": "start-storybook -p 9000 -c ./internals/storybook",
     "test": "jest --setupTestFrameworkScriptFile=./internals/test/setup.js --testRegex=/source/.*.test.js",
     "test:tdd": "yarn test -- --watch",
     "test:coverage": "yarn test -- --coverage --coverageDirectory=coverage"
@@ -29,7 +29,7 @@
   },
   "keywords": [
     "descco",
-    "ui-react"
+    "ui-vue"
   ],
   "author": "Hemerson Vianna <hemerson.lourenco@gmail.com> (https://github.com/hemersonvianna)",
   "license": "MIT",
@@ -65,9 +65,10 @@
     "precss": "2.0.0",
     "sass-loader": "6.0.6",
     "style-loader": "0.18.2",
+    "vbuild": "7.2.4",
     "vue": "2.4.2",
     "vue-play": "3.2.1",
-    "vuex": "^2.3.1",
+    "vuex": "2.3.1",
     "webpack": "3.5.2",
     "yargs": "8.0.2"
   }
