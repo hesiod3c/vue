@@ -15,7 +15,7 @@ export default {
   },
   computed: {
   }
-}
+};
 </script>
 <style lang="scss">
   @import '../../../scss/06-components/button.scss';
