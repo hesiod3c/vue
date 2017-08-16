@@ -1,8 +1,16 @@
 <template>
-  <button :class="[type, size]"><slot></slot></button>
+  <button :class="[classes[type], classes[size]]"><slot></slot></button>
 </template>
 <script>
+import { styles } from '@descco/ui-core';
+const classes = styles.button;
+
 export default {
+  data: () => {
+    return {
+      classes
+    };
+  },
   props: {
     type: {
       type: String,
@@ -17,6 +25,6 @@ export default {
   }
 };
 </script>
-<style scoped lang="css">
+<style lang='css'>
   @import '../../../node_modules/@descco/ui-core/lib/css/06-components/button.css';
 </style>
