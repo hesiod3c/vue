@@ -12,7 +12,7 @@ module.exports = {
   webpack: {
     resolve: {
       modules: [
-        path.resolve('../../shared')
+        path.resolve('../../source')
       ]
     }
   },

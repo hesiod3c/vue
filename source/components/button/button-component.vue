@@ -17,6 +17,6 @@ export default {
   }
 };
 </script>
-<style lang="scss">
-  @import '../../../scss/06-components/button.scss';
+<style scoped lang="css">
+  @import '../../../node_modules/@descco/ui-core/lib/css/06-components/button.css';
 </style>
