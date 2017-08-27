@@ -4,15 +4,15 @@
   "description": "Descco UI Vue",
   "main": "lib/index.js",
   "scripts": {
-    "build": "yarn build:js",
+    "build": "npm run build:js",
     "build:js": "cross-env NODE_ENV=production && babel source --out-dir lib && webpack --progress --config ./internals/webpack/webpack.config.js",
-    "lint": "yarn lint:js",
+    "lint": "npm run lint:js",
     "lint:js": "eslint source/**",
-    "precommit": "yarn lint",
-    "prepush": "yarn test",
+    "precommit": "npm run lint",
+    "prepush": "npm test",
     "test": "jest --setupTestFrameworkScriptFile=./internals/test/setup.js --testRegex=/source/.*.test.js",
-    "test:tdd": "yarn test -- --watch",
-    "test:coverage": "yarn test -- --coverage --coverageDirectory=coverage"
+    "test:tdd": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage --coverageDirectory=coverage"
   },
   "engines": {
     "node": ">=6.10.3",
