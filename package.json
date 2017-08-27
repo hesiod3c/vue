@@ -6,10 +6,8 @@
   "scripts": {
     "build": "yarn build:js",
     "build:js": "cross-env NODE_ENV=production && babel source --out-dir lib && webpack --progress --config ./internals/webpack/webpack.config.js",
-    "build:play": "poi build --config play.config.js",
     "lint": "yarn lint:js",
     "lint:js": "eslint source/**",
-    "play": "poi --config play.config.js",
     "precommit": "yarn lint",
     "prepush": "yarn test",
     "test": "jest --setupTestFrameworkScriptFile=./internals/test/setup.js --testRegex=/source/.*.test.js",
@@ -52,9 +50,7 @@
     "husky": "0.14.3",
     "jest": "20.0.4",
     "jsdom": "11.1.0",
-    "poi": "9.2.4",
-    "vue-eslint-parser": "1.0.0",
-    "vue-play": "3.2.1"
+    "vue-eslint-parser": "1.0.0"
   },
   "dependencies": {
     "@descco/ui-core": "0.1.1",
