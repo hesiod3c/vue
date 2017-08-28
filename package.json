@@ -6,13 +6,15 @@
   "scripts": {
     "build": "npm run build:js",
     "build:js": "cross-env NODE_ENV=production && babel source --out-dir lib && webpack --progress --config ./internals/webpack/webpack.config.js",
+    "build-storybook": "cross-env NODE_ENV=development build-storybook -c ./internals/storybook -o .out",
     "lint": "npm run lint:js",
     "lint:js": "eslint source/**",
     "precommit": "npm run lint",
     "prepush": "npm test",
     "test": "jest --setupTestFrameworkScriptFile=./internals/test/setup.js --testRegex=/source/.*.test.js",
     "test:tdd": "npm test -- --watch",
-    "test:coverage": "npm test -- --coverage --coverageDirectory=coverage"
+    "test:coverage": "npm test -- --coverage --coverageDirectory=coverage",
+    "storybook": "start-storybook -p 9000 -c ./internals/storybook"
   },
   "engines": {
     "node": ">=6.10.3",
@@ -36,6 +38,11 @@
   },
   "homepage": "https://github.com/descco-ui/vue#readme",
   "devDependencies": {
+    "@storybook/addon-events": "3.2.6",
+    "@storybook/addon-info": "3.2.9",
+    "@storybook/addon-knobs": "3.2.8",
+    "@storybook/addon-options": "3.2.6",
+    "@storybook/vue": "3.2.8",
     "babel-cli": "6.24.1",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",

@@ -1,3 +1,4 @@
 **/*.story.js
 **/*.test.js
 internals/
+stories/

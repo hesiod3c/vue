@@ -1,19 +1,31 @@
-import Vue from 'vue';
-import { play } from 'vue-play';
-import Button from './button-component.vue';
+import { storiesOf } from '@storybook/vue';
+import { action } from '@storybook/addon-actions';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
-Vue.component('Button', Button);
+import Button from './index';
 
-play('Button')
-  .add('Normal', {
-    template: `
-      <div>
-        <Button>Default</Button>
-        <Button type="primary">Primary</Button>
-        <Button type="success">Success</Button>
-        <Button type="info">Info</Button>
-        <Button type="warning">Warning</Button>
-        <Button type="danger">Danger</Button>
-      </div>
-    `
-  });
+import '../../../node_modules/@descco/ui-core/lib/css/06-components/button.css';
+
+const stories = storiesOf('Button', module);
+
+stories.addDecorator(withKnobs);
+
+stories.addWithInfo(
+  'Style',
+  `
+    This is the basic usage with the button.
+  `,
+  () => (
+    <div>
+      <Button onClick={action('clicked')}>Default</Button>&nbsp;
+      <Button style="primary">Primary</Button>&nbsp;
+      <Button style="success">Success</Button>&nbsp;
+      <Button style="info">Info</Button>&nbsp;
+      <Button style="warning">Warning</Button>&nbsp;
+      <Button style="danger">Danger</Button>&nbsp;
+      <Button style="transparent" size="none">
+        <Icon />
+      </Button>&nbsp;
+    </div>
+  )
+);
