@@ -41,6 +41,7 @@
     "@storybook/addon-events": "3.2.6",
     "@storybook/addon-info": "3.2.9",
     "@storybook/addon-knobs": "3.2.8",
+    "@storybook/addon-notes": "3.2.7",
     "@storybook/addon-options": "3.2.6",
     "@storybook/vue": "3.2.8",
     "babel-cli": "6.24.1",

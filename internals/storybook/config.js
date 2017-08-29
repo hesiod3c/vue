@@ -1,34 +1,11 @@
-import infoAddon from '@storybook/addon-info';
-import { configure, setAddon, addDecorator } from '@storybook/vue';
-import { setOptions } from '@storybook/addon-options';
+import Vue from 'vue';
+import Vuex from 'vuex';
+import { configure } from '@storybook/vue';
 
-addDecorator((fn, { kind, story }) => <div>
-  <header>
-    <h1>{kind}</h1>
-    <h2>{story}</h2>
-  </header>
-  <div>
-    {fn()}
-  </div>
-  <div>
-    Click the "?" mark at top-right to view the info.
-  </div>
-</div>);
+Vue.use(Vuex);
 
-setOptions({
-  name: 'UI Vue',
-  url: '',
-  goFullScreen: false,
-  showLeftPanel: true,
-  showDownPanel: true,
-  showSearchBox: false,
-  downPanelInRight: true
-});
-setAddon(infoAddon);
-
-function loadStories () {
-  const req = require.context('../../source/', true, /\.story\.js$/);
-  req.keys().forEach((filename) => req(filename))
+function loadStories() {
+  require('../../source/.stories');
 }
 
 configure(loadStories, module);
