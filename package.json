@@ -61,7 +61,7 @@
     "vue-eslint-parser": "1.0.0"
   },
   "dependencies": {
-    "@descco/ui-core": "0.1.1",
+    "@descco/ui-core": "0.2.0",
     "babel-loader": "7.1.1",
     "css-loader": "0.28.4",
     "eslint-loader": "1.9.0",

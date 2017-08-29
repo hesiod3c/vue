@@ -5,7 +5,8 @@ import { configure } from '@storybook/vue';
 Vue.use(Vuex);
 
 function loadStories() {
-  require('../../source/.stories');
+  const req = require.context('../../source/', true, /\.story\.js$/);
+  req.keys().forEach((filename) => req(filename));
 }
 
 configure(loadStories, module);
