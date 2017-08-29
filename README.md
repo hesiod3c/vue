@@ -1,8 +1,7 @@
 # Vue
 
-# Play 
+# Storybook 
 
 ```
-yarn global add vue-play-cli
-yarn global add getplay
+npm run storybook
 ```
