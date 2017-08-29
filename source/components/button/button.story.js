@@ -1,12 +1,16 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
 import { storiesOf } from '@storybook/vue';
 
-import UiButton from './index';
+import Button from './index';
 
-const stories = storiesOf('Button', module);
+Vue.component('Button', Button);
 
-stories.add('Style', () => ({
-  component: { UiButton },
-  template: '<ui-button style="default">Test</ui-button>',
+storiesOf('Button', module)
+.add('default', () => ({
+  template: `
+    <div style="width: 800px;height: 600px;">
+      <Button>Test</Button>
+      <Button type="primary">Test</Button>
+      <Button type="info">Test</Button>
+    </div>`
 }));

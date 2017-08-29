@@ -6,6 +6,7 @@ import { styles } from '@descco/ui-core';
 const classes = styles.button;
 
 export default {
+  name: 'ui-button',
   data: () => {
     return {
       classes
