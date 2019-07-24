@@ -1,7 +1,12 @@
 # Vue
 
 [![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
-[![issues](https://img.shields.io/github/issues/descco-ui/vue.svg?style=flat-square)](https://github.com/descco-ui/vue/issues)
+[![GitHub issues](https://img.shields.io/github/issues/org-hesiod/vue.svg)](https://github.com/org-hesiod/vue/issues)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/org-hesiod/vue.svg)
+![GitHub Release Date](https://img.shields.io/github/release-date/org-hesiod/vue.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/org-hesiod/vue.svg)
+![GitHub repo size](https://img.shields.io/github/repo-size/org-hesiod/vue.svg)
+![GitHub All Releases](https://img.shields.io/github/downloads/org-hesiod/vue/total.svg)
 
 # Storybook 
 
@@ -19,7 +24,7 @@ npm run storybook
 
 ## Log
 
-Check [Releases](https://github.com/descco-ui/vue/releases) for detailed changelog.
+Check [Releases](https://github.com/org-hesiod/vue/releases) for detailed changelog.
 
 ## License
 
